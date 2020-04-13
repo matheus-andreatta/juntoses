@@ -387,7 +387,7 @@ h1, h2, h3, h4, h5,
       bottom: 0;
       z-index: 0;
       width: 100%;
-      background: rgba(0, 166, 81, 0.9); }
+      background: #ff59007a; }
   .bg-image > .container {
     position: relative;
     z-index: 1; }
@@ -1841,67 +1841,7 @@ h1, h2, h3, h4, h5,
   opacity:0; transition:opacity .2s;
 }
 
-
-
-
-/* CSS DO MATHEUS CUSTOMIZADO */
-
-body{
-  font-size: 14px!important;
+.bg-image.overlay-primary:after{
+  background: none;
 }
 
-.contato-conosco img{
-  height: 400px!important;
-}
-
-
-
-.feature-29012 p{
-  font-size: 1.5rem;
-}
-
-.site-footer{
-  padding: 2em 0;
-}
-
-.site-footer a,.site-footer h2,.site-footer p{
-  color:white!important;
-}
-
-.site-footer span:hover{
-  transition: 0.2s;
-  color:#00a651 !important;
-}
-
-.icon-instagram {
-  color: #21323b!important;
-  background-color: white;
-  border-radius: 50px;
-  padding: 20px;
-}
-
-.logos-box{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: auto;
-}
-.logos-box img{
-  width: 150px;
-  height: 150px;
-}
-
-@media (max-width: 768px) {
-  .logos-box{
-    flex-wrap: wrap;
-  }
-  .logos-box .box{
-    width: 50%;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  .box-92819 h1{
-    font-size: 5rem;
-  }
-
-}
