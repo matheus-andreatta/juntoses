@@ -9,25 +9,29 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <!-- <link rel="manifest" href="./images/site.webmanifest"> -->
-
-    <link  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
     <script rel=preconnect src="https://use.fontawesome.com/a5c9b890ce.js"></script>
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="fonts/icomoon/style-min.css">
 
-    <!-- MAIN CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/style-min.css">
     <link rel="stylesheet" href="css/style-edit-min.css">
-    
+
+
+    <style>
+      .progress-bar{
+        width: 11%;
+      }
+      
+    </style>
+
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -45,26 +49,26 @@
           </div>
         </div>
     
-        <header style="background-color: #efefef;" class="site-navbar site-navbar-target  shadow">
+        <header class="site-navbar site-navbar-target  shadow">
           <div class="container">
             <div class="row align-items-center position-relative">
               <div class="site-logo">
-                <a href="#" style="text-transform: capitalize;" class="text-white">
-                <img src="./images/logos/JUNTOS_ES_TRANSPARENTE_1.png" alt="">
-              </a>
+                <a href="#" class="text-white">
+                  <img src="./images/logos/JUNTOS_ES_TRANSPARENTE_1.png" alt="">
+                </a>
               </div>
               <nav class="site-navigation text-left ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                   <li><a href="javascript: scrollToQuemSomos();" class="nav-link">Quem somos?</a></li>
                   <li><a href="javascript: scrollToCadastro();" class="nav-link">Cadastro</a></li>
-                  <li><a href="javascript: scrollToDoacoes();" class="nav-link">Doações</a></li>
+                  <li class="doacoes-menu"><a href="javascript: scrollToDoacoes();" class="nav-link" >Doações</a></li>
                   <li><a href="javascript: scrollToProcess();" class="nav-link">Nosso processo</a></li>
                   <li><a href="contato.html" class="nav-link">Contato</a></li>
                 </ul>
               </nav>
               <div class="ml-auto toggle-button d-inline-block d-lg-none">
                 <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white">
-                  <span style="font-family: 'icomoon' !important;color:#21323b!important;" class="icon-menu h3 text-white"></span>
+                  <span class="icon-menu h3 text-white"></span>
                 </a>
               </div>
             </div>
@@ -77,7 +81,7 @@
         <div class="owl-carousel-wrapper">
 
           <div class="box-92819">
-            <h1 class="text-white text-center" style="margin-bottom: 20rem;">
+            <h1 class="text-white text-center">
               VAMOS JUNTOS AJUDAR OS MAIS
               AFETADOS POR ESTA PANDEMIA NO
               ESPÍRITO SANTO             
@@ -87,7 +91,7 @@
           <div class="ftco-cover-1" style="background-image: url('./images/fundos/FUNDO_04.png');"></div>
         </div>
 
-        <div id="quem-somos"  class="site-section bg-image quem-somos-texto" style="background-color:#22252a;">
+        <div id="quem-somos"  class="site-section bg-image quem-somos-texto">
           <div  class="container">
             <div class="row mb-5">
               <div class="col-md-12 col-12">
@@ -111,36 +115,36 @@
           <div class="container">
             <div class="row mb-5">
               <div class="col-md-12">
-                <div class="heading-20219"  style="color:#22252a!important;">
-                  <h2  style="color:#22252a!important;" class="title mb-4 text-cursive">Faça seu cadastro</h2>
-                  <div class="d-flex justify-content-around text-center align-items-baseline cadastros-section" style="color:#22252a;">
+                <div class="heading-20219">
+                  <h2 class="title text-center mb-5 text-cursive">FAÇA SEU CADASTRO</h2>
+                  <div class="d-flex justify-content-around text-center align-items-baseline cadastros-section">
                     <div class="w-50 box-cadastro">
                       Se você representa alguma Instituição, ONG, Movimento ou Coletivo e deseja receber o apoio ou ser parceiro do JuntosES:
                       <hr>
                       <p>
-                        <a  style="font-size: 2rem;" href="https://bit.ly/juntoses_ongs" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
+                        <a  href="https://bit.ly/juntoses_ongs" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
                           CLIQUE AQUI
                         </a>
                       </p>
                     </div>
-                    <div class="w-50 box-cadastro">
+                    <!-- <div class="w-50 box-cadastro">
                       Se você é um comerciante local do ramo de alimentos e/ou produtos de higiene e gostaria de ser incluído na lista de lugares para compra:
                       <hr>
                       <p>
-                        <a  style="font-size: 2rem;" href="https://bit.ly/juntoses_comercio" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
+                        <a  href="https://bit.ly/juntoses_comercio" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
                           CLIQUE AQUI
                         </a>
                       </p>
-                    </div>
+                    </div> -->
                   </div>
 
-                  <div class="d-flex justify-content-around text-center cadastros-section" style="color:#22252a;">
+                  <!-- <div class="d-flex justify-content-around text-center cadastros-section">
                     <div class="w-50 box-cadastro">
                       Se a sua família precisa de auxílio:   
                       <hr>
                       <p>
-                        <a  style="font-size: 2rem;" href="https://bit.ly/juntoses_familia" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
-                          Clique aqui
+                        <a href="https://bit.ly/juntoses_familia" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
+                          CLIQUE AQUI
                         </a>
                       </p>
                     </div>
@@ -148,14 +152,14 @@
                       Se você quer ser um voluntário no JuntosES:
                       <hr>
                       <p>
-                        <a  style="font-size: 2rem;" href="https://bit.ly/juntoses_profissa" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
+                        <a href="https://bit.ly/juntoses_profissa" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
                           CLIQUE AQUI
                         </a>
                       </p>
                     </div>
                 
                     
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -171,7 +175,6 @@
                   <div class="col-md-7">
                     <div  id="process" class="heading-20219">
                       <h2 class="title text-white mb-4 text-cursive">Como funciona nosso processo?</h2>
-                      <p class="text-white"></p>
                     </div>
                   </div>
                 </div>
@@ -223,23 +226,21 @@
           </div>
         </div>
 
-        <div id="doacoes"  class="site-section arrecadacoes">
+        
+        <div id="doacoes"  class="site-section arrecadacoes-box">
           
           <div class="container">
 
             <div class="row barra-de-progresso">
               <div class="col-md-12">
 
-                <div class="text-center mb-4">
-                  <h2 class="title text-cursive">
-                    DOAÇÕES
-                  </h2>
-                  <!-- <hr> -->
-
+                <div  class="heading-20219">
+                  <h2 class="title text-center mb-5 text-cursive">Doações</h2>
                 </div>
+
                 <div class="progress mb-5">
                   <div  class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40"
-                  aria-valuemin="0" aria-valuemax="100" style="width:11%">
+                  aria-valuemin="0" aria-valuemax="100">
                     11%
                   </div>
                 </div>
@@ -267,172 +268,41 @@
                 </div>
               </div>
             </div>
-            <!-- <hr> -->
-            <!-- <div id="sumir"  class="text-center">
-              <p>
-                <a  style="font-size: 2rem;" href="javascript:showhide('uniquename','sumir')" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo text-white">
-                  CLIQUE PARA VER AS FORMAS DE DOAÇÃO
-                </a>
-              </p>
-            </div>
-            <div id="uniquename" class="cestas-basicas">
-              <div class="row ">
-                <div class="col-md-3">
-                    <div class="cause shadow-sm">
-                    
-                      <a href="#" class="cause-link d-block">
-                        <img src="https://wiki.the-west.com.br/images/8/89/Em_construcao.png" alt="Image" class="img-fluid">
-                        <div class="custom-progress-wrap">
-                          <div class="custom-progress-inner">
-                            <div class="custom-progress bg-danger" style="width: 0%;"></div>
-                          </div>
-                        </div>
+          </div>
+        </div>
+
+        <div class="site-section deposito-box pt-5">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-12">
+                <div class="d-flex justify-content-around text-center align-items-baseline cadastros-section">
+                  <div class="w-50 box-cadastro">
+                    <h2 class="title mb-4 text-cursive">DOAR POR TRANSFERÊNCIA BANCÁRIA</h2>
+                    <h3>PagSeguro Internet S.A (290)</h3>
+                    <p>Agência: 0001</p>
+                    <p>Conta corrente: 09603382-4</p>
+                    <h3 class="font-weight-bold">Associação Hub do Bem</h3>
+                    <h3 class="font-weight-bold">CNPJ: 35.217.888/0001-01</h3>
+                  </div>
+                  <div class="w-50 box-cadastro">
+                    <div class="d-flex justify-content-center">
+                      <h2 class="title text-center mb-4 text-cursive">DOAR PELO PICPAY</h2>
+                      <img class="text-right" src="./images/qr-code-picpay.jpeg" alt="">
+                    </div>
+                    <h3>Instruções de uso:</h3>
+                    <p>1) Baixe o aplicativo Picpay na Apple Store ou Google Play;</p>
+                    <p>2) Após realizar o seu cadastro no Picpay, faça sua doação com o valor desejado</p>
+                    <hr>
+                    <p>
+                      <a  href="http://app.picpay.com/payment?type=store&id=111728&sellerId=118514" class="btn btn-primary py-4 px-5 rounded-bottom color-blue-logo w-75">
+                        CLIQUE AQUI
                       </a>
-  
-                      <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                        <div class="ml-auto  d-flex justify-content-between">
-                          <span class="badge-primary py-1 small px-2 rounded mb-3 d-inline-block text-white">1 Cesta</span>
-                          <strong class="text-primary">R$ 60,00</strong>
-                        </div>
-                        <div>
-                            <p><a href="#" class="btn btn-primary py-3 px-4 color-blue-logo w-100">Indisponível</a></p>
-                        </div>
-                      </div>
-                    
-                    </div>
-                </div>
-                <div class="col-md-3">
-                  
-                  <div class="cause shadow-sm">
-                    
-                      <a href="#" class="cause-link d-block">
-                        <img src="https://wiki.the-west.com.br/images/8/89/Em_construcao.png" alt="Image" class="img-fluid">
-                        <div class="custom-progress-wrap">
-                          <div class="custom-progress-inner">
-                            <div class="custom-progress bg-primary" style="width: 0%;"></div>
-                          </div>
-                        </div>
-                      </a>
-  
-                      <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                        <div class="ml-auto  d-flex justify-content-between">
-                          <span class="badge-primary py-1 small px-2 rounded mb-3 d-inline-block text-white">3 Cestas</span>
-                          <strong class="text-primary">R$ 180,00</strong>
-                        </div>
-                        <div>
-                            <p><a href="#" class="btn btn-primary py-3 px-4 color-blue-logo w-100">Indisponível</a></p>
-                        </div>
-                      </div>
-                    
-                    </div>
-  
-                </div>
-                <div class="col-md-3">
-                  
-                  <div class="cause shadow-sm">
-                    
-                      <a href="#" class="cause-link d-block">
-                        <img src="https://wiki.the-west.com.br/images/8/89/Em_construcao.png" alt="Image" class="img-fluid">
-                        <div class="custom-progress-wrap">
-                          <div class="custom-progress-inner">
-                            <div class="custom-progress bg-warning" style="width: 0%;"></div>
-                          </div>
-                        </div>
-                      </a>
-  
-                      <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                        <div class="ml-auto  d-flex justify-content-between">
-                          <span style="background-color: #ff9f00!important;" class="badge-warning py-1 small px-2 rounded mb-3 d-inline-block text-white">6 Cestas</span>
-                          <strong style="color:#ff9f00">R$ 360,00</strong>
-                        </div>
-                        <div>
-                            <p><a href="#" class="btn btn-primary py-3 px-4 color-blue-logo w-100">Indisponível</a></p>
-                        </div>
-                      </div>
-                    
-                    </div>
-  
-                </div>
-                <div class="col-md-3">
-                  <div class="cause shadow-sm">
-                  
-                    <a href="#" class="cause-link d-block">
-                      <img src="https://wiki.the-west.com.br/images/8/89/Em_construcao.png" alt="Image" class="img-fluid">
-                      <div class="custom-progress-wrap">
-                        <div class="custom-progress-inner">
-                          <div class="custom-progress bg-danger" style="width: 0%;"></div>
-                        </div>
-                      </div>
-                    </a>
-  
-                    <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                      <div class="ml-auto  d-flex justify-content-between">
-                        <span style="background-color: #ff9f00!important;" class="badge-warning py-1 small px-2 rounded mb-3 d-inline-block text-white">15 Cestas</span>
-                        <strong  style="color:#ff9f00">R$ 900,00</strong>
-                      </div>
-                      <div>
-                          <p><a href="#" class="btn btn-primary py-3 px-4 color-blue-logo w-100">Indisponível</a></p>
-                      </div>
-                    </div>
-                  
+                    </p>
                   </div>
                 </div>
-              </div>
-              <div class="row justify-content-center">
-                
-                <div class="col-md-3">
-                  
-                  <div class="cause shadow-sm">
-                    
-                      <a href="#" class="cause-link d-block">
-                        <img src="https://wiki.the-west.com.br/images/8/89/Em_construcao.png" alt="Image" class="img-fluid">
-                        <div class="custom-progress-wrap">
-                          <div class="custom-progress-inner">
-                            <div class="custom-progress bg-primary" style="width: 0%;"></div>
-                          </div>
-                        </div>
-                      </a>
-                    
-                      <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                        <div class="ml-auto  d-flex justify-content-between">
-                          <span class="badge-danger py-1 small px-2 rounded mb-3 d-inline-block text-white">200 Cestas</span>
-                          <strong  style="color:#dc3545">R$ 12.000,00</strong>
-                        </div>
-                        <div>
-                            <p><a href="#" class="btn btn-primary py-3 px-4 color-blue-logo w-100">Indisponível</a></p>
-                        </div>
-                      </div>
-                    
-                    </div>
-  
-                </div>
-                <div class="col-md-3">
-                  
-                  <div class="cause shadow-sm">
-                    
-                      <a href="#" class="cause-link d-block">
-                        <img src="https://wiki.the-west.com.br/images/8/89/Em_construcao.png" alt="Image" class="img-fluid">
-                        <div class="custom-progress-wrap">
-                          <div class="custom-progress-inner">
-                            <div class="custom-progress bg-warning" style="width: 0%;"></div>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                        <div class="ml-auto  d-flex justify-content-between">
-                          <span class="badge-danger py-1 small px-2 rounded mb-3 d-inline-block text-white">nª Cestas</span>
-                          <strong  style="color:#dc3545">OUTRO VALOR</strong>
-                        </div>
-                        <div>
-                            <p><a href="#" class="btn btn-primary py-3 px-4 color-blue-logo w-100">Doe outro valor</a></p>
-                        </div>
-                      </div>
-                    </div>
-  
-                </div>
-              </div>
-            </div> -->
 
+              </div>
+            </div>
           </div>
         </div>
 
@@ -445,24 +315,35 @@
               </div>
               <h4>JuntosES é um movimento voluntário da sociedade para fortalecer o combate ao coronavírus no Estado do Espiríto Santo, que não possui vínculos partidários.</h4>
               <h4> O grupo atua de forma coordenada com organizações do terceiro setor, comunidades, coletivos e iniciativa privada.</h4>
-              <h3 class="text-cursive text-center mt-5 mb-5">APOIADORES</h3>
+              <h3 class="text-cursive text-center mt-5 mb-5"><b>REALIZADORES</b></h3>
                 <div class="logos-box">
                   <div class="box">
-                    <img src="./images/logos/logo-hub-do-bem.jpeg" alt="">
+                    <a href="#">
+                      <img src="./images/logos/logo-hub-do-bem.jpeg" alt="">
+                    </a>
                   </div>
-                  <!-- <div class="box">
-                    <img src="./images/logos/logo-pocante.png" alt="">
-                  </div> -->
                   <div class="box">
-                    <img src="./images/logos/logo-o-bem.png" alt="">
-                  </div>
-                  <!-- <div class="box">
-                    <img src="./images/logos/logo-fundaes.png" alt="">
-                  </div> -->
-                  <div class="box">
-                    <img src="./images/logos/logo-super-voluntarios.png" alt="">
+                    <a href="#">
+                      <img src="./images/logos/logo-super-voluntarios.png" alt="">
+                    </a>
                   </div>
                 </div>
+              <h3 class="text-cursive text-center mt-5 mb-5"><b>APOIADORES</b></h3>
+              <div class="logos-box">
+                <div class="box">
+                  <a href="#">
+                    <img src="./images/logos/logo-confraria.jpeg" alt="">
+                  </a>
+
+                </div>
+                <div class="box">
+                  <a href="#">
+                    <img src="./images/logos/logo-o-bem.png" alt="">
+                  </a>
+
+                </div>
+              </div>
+
           </div>
         </div>
         
@@ -474,9 +355,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h2  style="font-size: 2.5rem!important;padding-bottom: 10px;" class="footer-heading mb-4">Conheça nossas redes</h2>
-              <a style="font-size: 2.5rem!important;" href="https://www.instagram.com/juntos_es/" target="__blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-              <a style="font-size: 2.5rem!important;" href="https://www.facebook.com/juntoses.org" target="__blank" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
+              <h2 class="footer-heading mb-4 p-2">Conheça nossas redes</h2>
+              <a href="https://www.instagram.com/juntos_es/" target="__blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              <a href="https://www.facebook.com/juntoses.org" target="__blank" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
             </div>
           </div>
 
@@ -490,16 +371,16 @@
         </div>
       </footer>
 
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       
+    </body>
+    
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/popper.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.sticky.js"></script>
       <script src="js/aos.js"></script>
+      
+      <script src="js/main-min.js"></script>
 
-      <script src="js/main.js"></script>
       <script>
         mybutton = document.getElementById("myBtn");
         // When the user scrolls down 20px from the top of the document, show the button
@@ -514,21 +395,13 @@
             }
           }
 
-        // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
           document.body.scrollTop = 0; // For Safari
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
       </script>
-      <script>
-        function showhide(id,sumir) {
-            var e = document.getElementById(id);
-            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-            
-            var x = document.getElementById(sumir);
-            x.style.display = (x.style.display == 'none') ? 'block' : 'none';
-          }
-      </script>
+
+   
       <script type="text/javascript"> 
       function scrollToProcess() {
         let processo = document.getElementById("process");
@@ -552,43 +425,5 @@
 
     
       </script>
-  </body>
-        
-
-  <!-- <div class="modal fade" id="parceiros" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 style="color:#111010" class="modal-title" id="parceiros">Perguntas frequentes</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-          <div class="modal-body">
-             
-          </div>
-          <div class="modal-footer">
-          </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="perguntas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 style="color:#111010" class="modal-title" id="perguntas">Nossos parceiros</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-          <div class="modal-body">
-             
-          </div>
-          <div class="modal-footer">
-          </div>
-      </div>
-    </div>
-  </div> -->
 
 </html>

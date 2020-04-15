@@ -473,8 +473,8 @@ h1, h2, h3, h4, h5,
   padding: 1rem; }
   @media (max-width: 991.98px) {
     .site-navbar {
-      padding-top: 3rem;
-      padding-bottom: 3rem; } }
+      padding-top: 2rem;
+      padding-bottom: 1rem; } }
   .site-navbar .toggle-button {
     position: absolute;
     right: 0px; }
@@ -1644,10 +1644,8 @@ h1, h2, h3, h4, h5,
   .box-92819 h1 {
     font-weight: 900 !important;
     font-size: 6rem;
-    font-family: "Mansalva", cursive !important; }
+    }
 
-.text-cursive {
-  font-family: "Mansalva", cursive !important; }
 
 .media-02819 {
   margin-bottom: 60px; }
