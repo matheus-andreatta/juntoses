@@ -24,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style-min.css">
-    <link rel="stylesheet" href="css/style-edit-min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-edit.css">
     
   
 
@@ -51,8 +51,8 @@
           <div class="row align-items-center position-relative">
             <div class="site-logo">
               <a href="/"  class="text-white">
-              <img src="./images/logos/JUNTOS_HORIZONTAL.png.png" alt="">
-            </a>
+                <img src="./images/logos/JUNTOS_HORIZONTAL.png" alt="">
+              </a>
             </div>
             <nav class="site-navigation text-left ml-auto " role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
@@ -165,7 +165,7 @@
                     $('#error_message').html('');  
                     console.log('teste');
                     $.ajax({  
-                        url:"Models/Mail.php",  
+                        url:"mail.php",  
                         method:"POST",  
                         data:{name:name, message:message, email:email, subject:subject},  
                         success:function(data){  
