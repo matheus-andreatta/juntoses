@@ -51,7 +51,7 @@
           <div class="row align-items-center position-relative">
             <div class="site-logo">
               <a href="/"  class="text-white">
-              <img src="./images/logos/JUNTOS_ES_TRANSPARENTE_1.png" alt="">
+              <img src="./images/logos/JUNTOS_HORIZONTAL.png.png" alt="">
             </a>
             </div>
             <nav class="site-navigation text-left ml-auto " role="navigation">
@@ -165,7 +165,7 @@
                     $('#error_message').html('');  
                     console.log('teste');
                     $.ajax({  
-                        url:"mail.php",  
+                        url:"Models/Mail.php",  
                         method:"POST",  
                         data:{name:name, message:message, email:email, subject:subject},  
                         success:function(data){  
