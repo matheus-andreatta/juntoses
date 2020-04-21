@@ -211,12 +211,14 @@
                     </span>
                     <p>Meta</p>
                   </div>
+
                   <div class="col-md-4 text-center">
                     <span class="badge-primary py-1 small px-5 rounded mb-3 d-inline-block text-white">
                       427
                     </span>
                     <p>Arrecadadas</p>
                   </div>
+
                   <div class="col-md-4 text-center">
                     <span class="badge-primary py-1 small px-5 rounded mb-3 d-inline-block text-white">
                       427
@@ -239,22 +241,22 @@
                 <h2 class="title mb-4 text-center text-cursive">FAÇA SUA DOAÇÃO</h2>
 
                 <div class="d-flex justify-content-around text-center align-items-baseline cadastros-section">
-                  <div class="col-2 box-cadastro doacao-cestas-box" id="modalButton1">
+                  <div class="col-2 box-cadastro doacao-cestas-box" data-value="60,00">
                     <i class="fa fa-shopping-bag"></i>
                     <h2 class="title mt-2 text-cursive">1 CESTA</h2>
                     <h3 class="font-weight-bold">R$ 60,00</h3>
                   </div>
-                  <div class="col-2 box-cadastro doacao-cestas-box" id="modalButton2">
+                  <div class="col-2 box-cadastro doacao-cestas-box" data-value="120,00">
                     <i class="fa fa-shopping-bag"></i>
                     <h2 class="title mt-2 text-cursive">2 CESTAS</h2>
                     <h3 class="font-weight-bold">R$ 120,00</h3>
                   </div>
-                  <div class="col-2 box-cadastro doacao-cestas-box" id="modalButton3">
+                  <div class="col-2 box-cadastro doacao-cestas-box" data-value="180,00">
                     <i class="fa fa-shopping-bag"></i>
                     <h2 class="title mt-2 text-cursive">3 CESTAS</h2>
                     <h3 class="font-weight-bold">R$ 180,00</h3>
                   </div>
-                  <div class="col-2 box-cadastro doacao-cestas-box" id="modalButton4">
+                  <div class="col-2 box-cadastro doacao-cestas-box" data-value="any">
                     <i class="fa fa-shopping-bag"></i>
                     <h2 class="title mt-2 text-cursive">OUTRO VALOR</h2>
                   </div>
@@ -372,158 +374,23 @@
         </div>
       </footer>
 
-
-      <!-- The Modal -->
-      <div id="myModal1" class="modal">
+      <div id="modal-redirect" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-          <span class="close close1">&times;</span>
-          <h3 class="mb-3">Doação de 1 cesta no valor de <b class="font-weight-bold">R$60,00</b></h3>
-            <form method="post" action="Models/Payment.php">
+          <span class="close close2" onclick="$('#modal-redirect').hide();">&times;</span>
+            <form method="GET" action="services/action.php" id="ajaxRequest">
               <div class="form-group row">
-                <div class="col-md-12 mb-2">
-                  <label for="firstName">Nome</label>
-                  <input  name="firstName" id="firstName" type="text" class="form-control" placeholder="Digite seu nome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="lastName">Sobrenome</label>
-                  <input  name="lastName" id="lastName" type="text" class="form-control" placeholder="Digite seu sobrenome">
-                </div>
+                <input type="hidden" id="_token" name="_token" value="G28uo3rMzxkyBQxPgZYUWzIHqdnzUNcbFaMtT47Iri7szt8UJWqgLzn2RQrnfJ">
                 <div class="col-md-12 mb-2">
                   <label for="email">Email</label>
                   <input  name="email" id="email" type="email" class="form-control" placeholder="Digite seu email">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="phone">Telefone ou Celular</label>
-                  <input  name="phone" id="phone" type="text" class="form-control phone_with_ddd" placeholder="Digite seu telefone">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="cpf">CPF/CNPJ</label>
-                  <input  name="cpf" id="cpf" type="text" class="form-control cpfOuCnpj" placeholder="Digite seu CPF ou CNPJ">
-                </div>
-              </div>
-              <input hidden type="text" name="amount" value="6000">
-              <input hidden name="paymentMethod" value="creditCard" type="text">
-              <div class="form-group row">
-                <div class="col-md-12 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5 rounded-bottom" value="Prosseguir">
-                </div>
-              </div>
-            </form>
-        </div>
-      </div>
-
-      <div id="myModal2" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close close2">&times;</span>
-          <h3 class="mb-3">Doação de 2 cestas no valor de <b class="font-weight-bold">R$120,00</b></h3>
-            <form method="POST" action="Models/Payment.php">
-              <div class="form-group row">
-                <div class="col-md-12 mb-2">
-                  <label for="firstName">Nome</label>
-                  <input  name="firstName" id="firstName" type="text" class="form-control" placeholder="Digite seu nome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="lastName">Sobrenome</label>
-                  <input  name="lastName" id="lastName" type="text" class="form-control" placeholder="Digite seu sobrenome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="email">Email</label>
-                  <input  name="email" id="email" type="email" class="form-control" placeholder="Digite seu email">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="phone">Telefone ou Celular</label>
-                  <input  name="phone" id="phone" type="text" class="form-control phone_with_ddd" placeholder="Digite seu telefone">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="cpf">CPF/CNPJ</label>
-                  <input  name="cpf" id="cpf" type="text" class="form-control cpfOuCnpj" placeholder="Digite seu CPF ou CNPJ">
-                </div>
-              </div>
-              <input hidden type="text" name="amount" value="12000">
-              <input hidden name="paymentMethod" value="creditCard" type="text">
-
-              <div class="form-group row">
-                <div class="col-md-12 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5 rounded-bottom" value="Prosseguir">
-                </div>
-              </div>
-            </form>
-        </div>
-      </div>
-
-      <div id="myModal3" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close close3">&times;</span>
-          <h3 class="mb-3">Doação de 3 cestas no valor de <b class="font-weight-bold">R$180,00</b></h3>
-            <form method="POST" action="Models/Payment.php">
-              <div class="form-group row">
-                <div class="col-md-12 mb-2">
-                  <label for="firstName">Nome</label>
-                  <input  name="firstName" id="firstName" type="text" class="form-control" placeholder="Digite seu nome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="lastName">Sobrenome</label>
-                  <input  name="lastName" id="lastName" type="text" class="form-control" placeholder="Digite seu sobrenome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="email">Email</label>
-                  <input  name="email" id="email" type="email" class="form-control" placeholder="Digite seu email">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="phone">Telefone ou Celular</label>
-                  <input  name="phone" id="phone" type="text" class="form-control phone_with_ddd" placeholder="Digite seu telefone">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="cpf">CPF/CNPJ</label>
-                  <input  name="cpf" id="cpf" type="text" class="form-control cpfOuCnpj" placeholder="Digite seu CPF ou CNPJ">
-                </div>
-              </div>
-              <input hidden type="text" name="amount" value="18000">
-              <input hidden name="paymentMethod" value="creditCard" type="text">
-              <div class="form-group row">
-                <div class="col-md-12 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5 rounded-bottom" value="Prosseguir">
-                </div>
-              </div>
-            </form>
-        </div>
-      </div>
-
-      <div id="myModal4" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close close4">&times;</span>
-          <h3 class="mb-3">Doação de outro valor</h3>
-            <form method="POST" action="Models/Payment.php">
-              <div class="form-group row">
-                <div class="col-md-12 mb-2">
-                  <label for="firstName">Nome</label>
-                  <input  name="firstName" id="firstName" type="text" class="form-control" placeholder="Digite seu nome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="lastName">Sobrenome</label>
-                  <input  name="lastName" id="lastName" type="text" class="form-control" placeholder="Digite seu sobrenome">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="email">Email</label>
-                  <input  name="email" id="email" type="email" class="form-control" placeholder="Digite seu email">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="phone">Telefone ou Celular</label>
-                  <input  name="phone" id="phone" type="text" class="form-control phone_with_ddd" placeholder="Digite seu telefone">
-                </div>
-                <div class="col-md-12 mb-2">
-                  <label for="cpf">CPF/CNPJ</label>
-                  <input  name="cpf" id="cpf" type="text" class="form-control cpfOuCnpj" placeholder="Digite seu CPF ou CNPJ">
                 </div>
                 <div class="col-md-12 mb-2">
                   <label for="amount">Valor</label>
                   <input  name="amount" id="amount" type="text" class="form-control money2" placeholder="Digite o valor desejado">
                 </div>
               </div>
+
               <div class="form-group row">
                 <div class="col-md-12 mr-auto">
                   <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5 rounded-bottom" value="Prosseguir">
@@ -532,9 +399,6 @@
             </form>
         </div>
       </div>
-
-      
-<!-- Button trigger modal -->
     
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="js/jquery-3.3.1.min.js"></script>
@@ -658,6 +522,40 @@
         }
         $('.cpfOuCnpj').length > 11 ? $('.cpfOuCnpj').mask('00.000.000/0000-00', options) : $('.cpfOuCnpj').mask('000.000.000-00#', options);
       </script>
+      <script>
+        
+        $('[data-value]').click(function(e){
+          const target = $(this).data('value');
+          $('#modal-redirect').show();
+          $('#amount')[0].value = target == 'any' ? '00,00' : target;
+        });
 
+
+        $('#ajaxRequest').submit(async function(e){
+          e.preventDefault();
+          let formSerialize = $(this).serializeArray();
+          formSerialize = await formSerialize.reduce( (reduce,item) => {
+            reduce[item.name] = item.value;
+            return reduce;
+          },{})
+          $.ajax({
+            url: "/services/action.php",
+            data:formSerialize,
+            success:function(data){
+              const response = JSON.parse(data);
+              if(response.status === 200){
+                window.location.href = response.data.paymentUrl;
+              }
+            },
+            error:function(data){
+              console.error(data)
+            },
+            beforeSend:function(data){
+              console.log('Send request...')
+            }
+          })
+        });
+
+      </script>
     </body>
 </html>

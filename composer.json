@@ -1,0 +1,11 @@
+{
+  "require": {
+    "php-curl-class/php-curl-class": "^8.7",
+    "vlucas/phpdotenv": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "JuntosES\\": "./"
+    }
+  }
+}
