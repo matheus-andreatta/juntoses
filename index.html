@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
 
-    <script rel=preconnect src="https://use.fontawesome.com/a5c9b890ce.js"></script>
+    <script rel=preconnect  SameSite="Secure" src="https://use.fontawesome.com/a5c9b890ce.js"></script>
     <link rel="stylesheet" href="fonts/icomoon/style-min.css">
     <!-- <link rel="manifest" href="./images/site.webmanifest"> -->
 
@@ -231,7 +231,7 @@
           </div>
 
         </div>
-
+<!-- 
         <div class="site-section deposito-box pt-5">
           <div class="container">
             <div class="row align-items-center">
@@ -263,14 +263,14 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         
         <div class="site-section deposito-box pt-2">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-12">
                 <div class="d-flex justify-content-around text-center align-items-baseline cadastros-section">
-                  <div class="col-6 box-cadastro">
+                  <div class="box-cadastro">
                     <h2 class="title mb-4 text-cursive">DOAR POR TRANSFERÊNCIA BANCÁRIA</h2>
                     <h3>AVISTA S.A. CFI (280)</h3>
                     <p>Agência: 0001</p>
@@ -278,7 +278,7 @@
                     <h3 class="font-weight-bold">Associação Hub do Bem</h3>
                     <h3 class="font-weight-bold">CNPJ: 35.217.888/0001-01</h3>
                   </div>
-                  <div class="col-6 box-cadastro">
+                  <div class="box-cadastro">
                     <div class="d-flex justify-content-center">
                       <h2 class="title text-center mb-4 text-cursive">DOAR PELO PICPAY</h2>
                       <img class="text-right" src="./images/qr-code-picpay.jpeg" alt="">
@@ -338,6 +338,11 @@
                 <div class="box">
                   <a href="#">
                     <img src="./images/logos/logo-fundaes.png" alt="">
+                  </a>
+                </div>
+                <div class="box">
+                  <a href="#">
+                    <img src="./images/logos/logo-peb.png" alt="">
                   </a>
                 </div>
               </div>
@@ -536,12 +541,15 @@
       
 <!-- Button trigger modal -->
     
+      <script src="js/jquery-3.3.1.min.js"></script>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
       <script src="js/popper.min.js"></script>
       <script src="js/aos.js"></script>
       <script src="js/main-min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
       <script type="text/javascript">
         mybutton = document.getElementById("myBtn");
@@ -561,6 +569,8 @@
         }
       </script>
    
+<!-- Scroll-->
+
       <script type="text/javascript"> 
         function scrollToProcess() {
           let processo = document.getElementById("process");
@@ -585,7 +595,10 @@
     
       </script>
 
-      <script>
+
+<!-- Modal -->
+
+      <!-- <script type="text/javascript">
         // Get the modal
         var modal1 = document.getElementById("myModal1");
         var modal2 = document.getElementById("myModal2");
@@ -640,8 +653,11 @@
         }               
 
       </script>
+ -->
 
-      <script>
+
+<!-- MASKS -->
+      <script type="text/javascript">
         $(document).ready(function(){
           $('.phone_with_ddd').mask('(00) 00000-0000');
           $('.money2').mask("#.##0,00", {reverse: true});
@@ -649,7 +665,7 @@
         }); 
       </script>
 
-      <script>
+      <script type="text/javascript">
         var options = {
             onKeyPress: function (cpf, ev, el, op) {
                 var masks = ['000.000.000-000', '00.000.000/0000-00'];

@@ -89,7 +89,7 @@
 }
 
 .box-cadastro a{
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .ongs-cadastro{
@@ -207,7 +207,8 @@
 .logos-box img{
   width: 150px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
   

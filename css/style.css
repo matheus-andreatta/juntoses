@@ -73,6 +73,18 @@ a {
 a:hover {
   text-decoration: none; 
 }
+body.offcanvas-menu {
+  position: relative; 
+}
+body.offcanvas-menu:before {
+  opacity: 1;
+  visibility: visible; 
+}
+.offcanvas-menu .site-mobile-menu {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%); 
+}
 
 .form-control:active, .form-control:focus {
   border-color: #00a651; 
@@ -150,7 +162,7 @@ a:hover {
   position: relative;
   top: 0;
   width: 100%;
-  padding: 1rem; 
+  padding: 1rem 0; 
 }
 
 .site-navbar .site-navigation.border-bottom {
@@ -628,7 +640,7 @@ a:hover {
   background: none;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .box-title{
     width: 900px;
   }
@@ -638,8 +650,7 @@ a:hover {
   } 
 
   .site-navbar {
-    padding-top: 2rem;
-    padding-bottom: 1rem; 
+    padding:1rem 0; 
   } 
 
   .site-navbar .toggle-button {
@@ -665,7 +676,7 @@ a:hover {
 
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .box-title{
     width: 600px;
   }
