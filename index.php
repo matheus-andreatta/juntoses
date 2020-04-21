@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style-min.css">
     <link rel="stylesheet" href="css/style-edit-min.css">
+    <link rel="stylesheet" href="css/loading.css">
+
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -233,7 +235,7 @@
           </div>
 
         </div>
-<!-- 
+
         <div class="site-section deposito-box pt-5">
           <div class="container">
             <div class="row align-items-center">
@@ -265,7 +267,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
         
         <div class="site-section deposito-box pt-2">
           <div class="container">
@@ -404,8 +406,28 @@
             </form>
         </div>
       </div>
+      
+      <div class="modal fade" style="z-index: 9999;"  id="alertas" tabindex="-1" role="dialog" aria-labelledby="alertasLabel" aria-hidden="true">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h2>Solicitação aprovada. Aguarde o redirecionamento.</h2>
+            </div>
+          </div>
+      </div>
+
+      <div class="modal fade" style="z-index: 9999;"  id="erro_message" tabindex="-1" role="dialog" aria-labelledby="alertasLabel" aria-hidden="true">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h2>Solicitação recusada. Favor entrar em contato com administrador da página.</h2>
+            </div>
+          </div>
+      </div>
     
-      <script src="js/jquery-3.3.1.min.js"></script>  
+      <div id="wrapper-loading">
+        <div class="loader"></div>
+      </div>
+      <!-- <script src="js/jquery-3.3.1.min.js"></script>   -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
@@ -460,64 +482,6 @@
       </script>
 
 
-<!-- Modal -->
-
-      <!-- <script type="text/javascript">
-        // Get the modal
-        var modal1 = document.getElementById("myModal1");
-        var modal2 = document.getElementById("myModal2");
-        var modal3 = document.getElementById("myModal3");
-        var modal4 = document.getElementById("myModal4");
-
-        // Get the button that opens the modal
-        var btn1 = document.getElementById("modalButton1");
-        var btn2 = document.getElementById("modalButton2");
-        var btn3 = document.getElementById("modalButton3");
-        var btn4 = document.getElementById("modalButton4");
-
-        // Get the <span> element that closes the modal
-        var span1 = document.getElementsByClassName("close1")[0];
-        var span2 = document.getElementsByClassName("close2")[0];
-        var span3 = document.getElementsByClassName("close3")[0];
-        var span4 = document.getElementsByClassName("close4")[0];
-
-        // When the user clicks on the button, open the modal
-        btn1.onclick = function() {
-          modal1.style.display = "block";
-        }
-        btn2.onclick = function() {
-          modal2.style.display = "block";
-        }
-        btn3.onclick = function() {
-          modal3.style.display = "block";
-        }
-        btn4.onclick = function() {
-          modal4.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span1.onclick = function() {
-          modal1.style.display = "none";
-        }
-        span2.onclick = function() {
-          modal2.style.display = "none";
-        }
-        span3.onclick = function() {
-          modal3.style.display = "none";
-        }
-        span4.onclick = function() {
-          modal4.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }               
-
-      </script>
- -->
 
 
 <!-- MASKS -->
@@ -546,6 +510,22 @@
           $('#amount')[0].value = target == 'any' ? '00,00' : target;
         });
 
+        function toggleLoading(){
+          $('#wrapper-loading').toggleClass('active');
+        }
+        
+        function toggleLoadingOff(){
+          $('.modal-backdrop').toggleClass('show');
+        }
+
+         function messageSuccess(){
+          $("#alertas").modal('show');
+        }
+
+         function messageErro(){
+          $("#erro_message").modal('show');
+        }
+
 
         $('#ajaxRequest').submit(async function(e){
           e.preventDefault();
@@ -554,17 +534,23 @@
             reduce[item.name] = item.value;
             return reduce;
           },{})
+            toggleLoading()
           $.ajax({
-            url: "/services/action.php",
+            url: "./services/action.php",
             data:formSerialize,
             success:function(data){
+              toggleLoading();
               const response = JSON.parse(data);
               if(response.status === 200){
+                toggleLoadingOff();
+                messageSuccess();
                 window.location.href = response.data.paymentUrl;
               }
             },
             error:function(data){
-              console.error(data)
+              if(response.status === 200){
+                window.location.href = response.data.paymentUrl;
+              }
             },
             beforeSend:function(data){
               console.log('Send request...')

@@ -8,9 +8,10 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable('../');
 $dotenv->load();
 
-$token = getenv('TOKEN');
+$token = $_ENV['TOKEN'];
 $price = $_GET['amount'];
 $mail = $_GET['email'];
+
 
 if(empty($_GET['_token']) || $token != $_GET['_token']){
   echo json_encode([
@@ -41,14 +42,15 @@ if (!is_int($price)){
   die();
 }
 
-$authorization = getenv('API_KEY');
+$endpoint = $_ENV['END_POINT'];
+$authorization = $_ENV['API_KEY'];
 
 $curl = new Curl();
 $curl->setHeader('Content-Type', 'application/json');
 $curl->setHeader('Authorization', 'Basic '.$authorization);
-$curl->post(getenv('END_POINT'), array(
+$curl->post($endpoint, array(
     "amount" => $price,
-    "sellReference" => "TESTE",
+    "sellReference" => "Doação ao JuntosES",
     "userIdentifier" => "24a0ea3f-7e69-46e2-9550-43e828171385",
     "paymentReceiptEmail" => $mail,
     "notificationUrl" => "http://" 
