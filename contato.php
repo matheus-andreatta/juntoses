@@ -10,20 +10,25 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
     
     <script rel=preconnect SameSite="Secure" src="https://use.fontawesome.com/a5c9b890ce.js"></script>
-    <link rel="stylesheet" href="fonts/icomoon/style-min.css">
+    <link rel="stylesheet" href="assets/fonts/icomoon/style-min.css">
     <!-- <link rel="manifest" href="./images/site.webmanifest"> -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style-min.css">
-    <link rel="stylesheet" href="css/style-edit-min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-edit.css">
+    <style>
+      a{
+        font-size: 1.5rem;
+      }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -46,7 +51,7 @@
           <div class="row align-items-center position-relative">
             <div class="site-logo">
               <a href="/"  class="text-white">
-                <img src="./images/logos/JUNTOS_HORIZONTAL.png" alt="">
+                <img src="./assets/images/logos/logo-juntoses.png" alt="">
               </a>
             </div>
             <nav class="site-navigation text-left ml-auto " role="navigation">
@@ -67,7 +72,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 mt-5">
-            <h3 class="text-cursive">Entre em contato por email ou  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5527995160149">WhatsApp <i class="fa fa-whatsapp"></i></a></h3>
+            <h4 class="text-cursive">Entre em contato por email ou  
+              <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5527995160149">WhatsApp 
+                <i class="fa fa-whatsapp"></i>
+              </a>
+            </h4>
           </div>
         </div>
       </div>
@@ -140,7 +149,7 @@
 </body>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/main-min.js"></script>
+    <script src="assets/js/main-min.js"></script>
 
     <script>  
       $(document).ready(function(){  

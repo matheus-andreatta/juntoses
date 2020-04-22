@@ -38,12 +38,6 @@
   color:#efefef!important;
 }
 
-.site-navbar .site-navigation .site-menu>.doacoes-menu>a:hover {
-  padding: 6px!important;
-  font-size: 1.1rem!important;
-  font-weight: 600;
-  color:#efefef!important;
-}
 
 
 
@@ -143,6 +137,7 @@
   font-size: 3rem;
   color: #ff9f00;
 }
+
 .arrecadacoes-box{
     padding: 4rem 0 0!important;
 }
@@ -198,8 +193,6 @@
 /* REPRESENTANTES */
 
 .logos-box{
-  display: flex;
-  justify-content: center;
   width: 100%;
   height: auto;
 }
@@ -299,10 +292,9 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 10% auto 0;
   padding: 20px;
   border: 1px solid #888;
-  width: 35%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -333,6 +325,9 @@
   }
   .deposito-box .box-cadastro .d-flex{
     flex-wrap: wrap;
+  }
+  .modal-content {
+    margin: 25% auto 0;
   }
 }
   
@@ -382,6 +377,9 @@
   #doacoes p{
     font-weight: 600;
   }
+  .modal-content {
+    margin: 30% auto 0;
+  }
 
 }
 
@@ -395,6 +393,9 @@
 
   .cestas-basicas{
     display:none;
+  }
+  .modal-content {
+    margin: 40% auto 0;
   }
 
 }
